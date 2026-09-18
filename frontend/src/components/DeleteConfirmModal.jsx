@@ -5,7 +5,7 @@ export default function DeleteConfirmModal({ documentToDelete, setDocumentToDele
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity" onClick={() => setDocumentToDelete(null)}>
-      <div className="relative w-full max-w-sm flex flex-col bg-zinc-900 rounded-2xl ring-1 ring-white/10 shadow-2xl p-6" onClick={e => e.stopPropagation()}>
+      <div className="relative w-full max-w-sm flex flex-col glass-panel rounded-2xl p-6" onClick={e => e.stopPropagation()}>
         <h3 className="text-lg font-medium text-zinc-100 mb-2">Delete document?</h3>
         <p className="text-sm text-zinc-400 mb-6">
           This will remove all associated embeddings from the vector database. This action cannot be undone.

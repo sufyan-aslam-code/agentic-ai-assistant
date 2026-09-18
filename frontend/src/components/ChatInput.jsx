@@ -10,9 +10,9 @@ export default function ChatInput({
   handleAbort
 }) {
   return (
-    <footer className="absolute bottom-0 w-full bg-zinc-950/80 backdrop-blur-md p-3 pb-4 md:p-4 md:pb-6 z-10 border-t border-white/5">
+    <footer className="absolute bottom-0 w-full bg-gradient-to-t from-[#0A0A0F] to-transparent p-3 pb-4 md:p-4 md:pb-6 z-10 border-t border-white/5">
       <div className="max-w-3xl mx-auto">
-        <form onSubmit={handleSubmit} className="relative flex items-center w-full bg-zinc-800 rounded-2xl ring-1 ring-transparent focus-within:ring-white/20 transition-all shadow-sm pl-2">
+        <form onSubmit={handleSubmit} className="relative flex items-center w-full glass-panel rounded-full ring-1 ring-transparent focus-within:ring-purple-500/50 transition-all shadow-lg shadow-purple-900/10 pl-4 py-1">
           <textarea
             ref={inputRef}
             value={input}
@@ -48,12 +48,12 @@ export default function ChatInput({
             <button
               type="submit"
               disabled={!input.trim()}
-              className={`flex items-center justify-center w-8 h-8 mr-2 rounded-full bg-white text-black transition-all cursor-pointer ${
-                !input.trim() ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:scale-105 active:scale-95'
+              className={`flex items-center justify-center w-9 h-9 mr-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white transition-all shadow-lg cursor-pointer ${
+                !input.trim() ? 'opacity-40 cursor-not-allowed' : 'opacity-100 hover:scale-105 hover:shadow-purple-500/30 active:scale-95'
               }`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
             </button>
           )}

@@ -263,11 +263,15 @@ function App() {
   }
 
   return (
-    <div className="flex h-screen bg-[#0f0f11] text-zinc-100 font-sans relative overflow-hidden">
+    <div className="flex h-screen bg-[#0A0A0F] text-zinc-100 font-sans relative overflow-hidden">
+      {/* Ambient Background Blobs */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
+
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-30 md:hidden backdrop-blur-sm transition-opacity"
+          className="fixed inset-0 bg-black/60 z-30 md:hidden backdrop-blur-md transition-opacity"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -328,10 +332,9 @@ function App() {
         handleDeleteConfirm={handleDeleteDocument}
       />
 
-      {/* Alert Modal */}
       {alertMessage && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-          <div className="w-full max-w-sm bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-150">
+          <div className="w-full max-w-sm glass-panel rounded-xl p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-150">
             <h3 className="text-lg font-semibold text-zinc-100">Notice</h3>
             <p className="text-sm text-zinc-400 leading-relaxed">
               {alertMessage}

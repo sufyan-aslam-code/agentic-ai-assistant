@@ -28,7 +28,7 @@ export default function SourceModal({ selectedSource, setSelectedSource }) {
       onClick={() => setSelectedSource(null)}
     >
       <div 
-        className="relative flex flex-col max-h-[85vh] w-full max-w-2xl bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-2xl animate-in zoom-in-95 duration-200"
+        className="relative flex flex-col max-h-[85vh] w-full max-w-2xl glass-panel rounded-xl p-6 shadow-2xl animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-800 shrink-0">

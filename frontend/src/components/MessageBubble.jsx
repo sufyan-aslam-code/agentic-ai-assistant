@@ -24,8 +24,8 @@ export default function MessageBubble({ msg, setSelectedSource }) {
         <div
           className={`px-3 py-2 md:px-4 md:py-3 text-[13px] md:text-sm leading-relaxed break-words ${
             msg.role === 'user'
-              ? 'bg-zinc-800 text-white rounded-2xl ml-auto'
-              : 'bg-transparent text-zinc-300 w-full'
+              ? 'bg-gradient-to-br from-blue-600 to-purple-600 shadow-lg shadow-purple-500/20 text-white rounded-2xl ml-auto'
+              : 'glass-panel text-zinc-200 rounded-2xl w-full'
           }`}
         >
           {msg.role === 'ai' ? (

@@ -38,7 +38,7 @@ export default function Sidebar({
   return (
     <>
       <aside
-      className={`shrink-0 border-r border-white/10 bg-zinc-900 flex flex-col transition-all duration-300 ease-in-out overflow-hidden fixed md:relative z-40 h-full shadow-2xl md:shadow-none ${
+      className={`shrink-0 border-r border-white/10 glass-panel bg-[#0A0A0F]/60 flex flex-col transition-all duration-300 ease-in-out overflow-hidden fixed md:relative z-40 h-full shadow-2xl md:shadow-none ${
         sidebarOpen ? 'w-72 translate-x-0' : 'w-72 md:w-0 -translate-x-full md:translate-x-0'
       }`}
     >
@@ -46,7 +46,7 @@ export default function Sidebar({
         <h2 className="text-sm font-semibold tracking-wide text-zinc-400 uppercase">Chat Sessions</h2>
         <button
           onClick={() => setSidebarOpen(false)}
-          className="p-1 rounded-md hover:bg-zinc-800 transition-colors text-zinc-400 hover:text-white cursor-pointer md:hidden"
+          className="p-1 rounded-md hover:bg-white/10 transition-colors text-zinc-400 hover:text-white cursor-pointer"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -194,7 +194,7 @@ export default function Sidebar({
       {/* Delete Confirmation Modal */}
       {sessionToDelete && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-          <div className="w-full max-w-sm bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-150">
+          <div className="w-full max-w-sm glass-panel rounded-xl p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-150">
             <h3 className="text-lg font-semibold text-zinc-100">Delete Chat?</h3>
             <p className="text-sm text-zinc-400">
               Are you sure you want to delete this conversation? This action cannot be undone.
